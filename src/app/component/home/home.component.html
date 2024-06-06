@@ -1,0 +1,21 @@
+<div
+  class="container-fluid p-2 d-flex justify-content-center align-items-center">
+  <div>
+    <!-- Contenuto di benvenuto -->
+    <h1 class="text-center text-white">BENVENUTO</h1>
+    
+    <!-- Contenitore per il login e la registrazione -->
+    <div *ngIf="!user" class="container mt-5 text-center border border-2 border-dark d-flex justify-content-center align-items-center" style="height: 200px; background-color: rgba(240, 255, 255, 0.4)">
+      <div class="">
+        <a class="btn btn-primary mx-auto" style="width: 300px" [routerLink]="['/accedi']">Login</a>
+        <a class="btn btn-primary mx-auto ms-3" style="width: 300px" [routerLink]="['/registrati']">Signup</a>
+      </div>
+    </div>
+    
+    <!-- Saluto se l'utente è loggato -->
+    <h1 *ngIf="user" class="text-center text-white">CIAO</h1>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
